@@ -2,7 +2,7 @@
 using MelonLoader;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(Orangenium.Main), "Orangenium", "1.0.0", "Circl")]
+[assembly: MelonInfo(typeof(Orangenium.Main), "Orangenium", "Q1.0.0", "Circl")]
 
 namespace Orangenium
 {
@@ -21,8 +21,8 @@ namespace Orangenium
             MaterialConfig config = new MaterialConfig() { DamageMultiplier = 20f, DurabilityMultiplier = 0.01f};
             orange.Configure(config);
 
-            Material mainMat = UnityEngine.Object.Instantiate(orange.physicalMaterial.materialChannels[0].Material);
-            Material nonForgeMat = UnityEngine.Object.Instantiate(orange.physicalMaterial.materialChannels[0].atlasedMaterial);
+            Material mainMat = UnityEngine.Object.Instantiate(orange.physicalMaterial.androidMaterialChannels[0].Material);
+            Material nonForgeMat = UnityEngine.Object.Instantiate(orange.physicalMaterial.androidMaterialChannels[0].atlasedMaterial);
 
             mainMat.name = "Orangenium";
             nonForgeMat.name = "Orangenium NonForging";
